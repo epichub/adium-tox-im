@@ -12,7 +12,7 @@
 		C47CEC0418B7774B00D6AE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */; };
 		C47CEC0E18B7785100D6AE24 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEC0D18B7785100D6AE24 /* Adium.framework */; };
 		C47CEC1118B7843800D6AE24 /* ToxPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CEC1018B7843800D6AE24 /* ToxPlugin.m */; };
-		C47CEC1518B79B4B00D6AE24 /* toxprpl.c in Sources */ = {isa = PBXBuildFile; fileRef = C47CEC1418B79B4B00D6AE24 /* toxprpl.c */; };
+		C47CEC1518B79B4B00D6AE24 /* toxprpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C47CEC1418B79B4B00D6AE24 /* toxprpl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		C47CEC0D18B7785100D6AE24 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
 		C47CEC0F18B7843800D6AE24 /* ToxPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToxPlugin.h; sourceTree = "<group>"; };
 		C47CEC1018B7843800D6AE24 /* ToxPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToxPlugin.m; sourceTree = "<group>"; };
-		C47CEC1418B79B4B00D6AE24 /* toxprpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = toxprpl.c; sourceTree = "<group>"; };
+		C47CEC1418B79B4B00D6AE24 /* toxprpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = toxprpl.cpp; sourceTree = "<group>"; };
 		C47CEC1618B79C3400D6AE24 /* toxprpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toxprpl.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,7 +95,7 @@
 		C47CEC0018B7774B00D6AE24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C47CEC1418B79B4B00D6AE24 /* toxprpl.c */,
+				C47CEC1418B79B4B00D6AE24 /* toxprpl.cpp */,
 				C47CEC0118B7774B00D6AE24 /* ToxPlugin-Info.plist */,
 				C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */,
 				C47CEC0518B7774B00D6AE24 /* ToxPlugin-Prefix.pch */,
@@ -169,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C47CEC1118B7843800D6AE24 /* ToxPlugin.m in Sources */,
-				C47CEC1518B79B4B00D6AE24 /* toxprpl.c in Sources */,
+				C47CEC1518B79B4B00D6AE24 /* toxprpl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
