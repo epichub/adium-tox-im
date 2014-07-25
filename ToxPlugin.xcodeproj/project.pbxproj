@@ -9,10 +9,14 @@
 /* Begin PBXBuildFile section */
 		C47CEBFA18B7774B00D6AE24 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEBF918B7774B00D6AE24 /* Cocoa.framework */; };
 		C47CEC0418B7774B00D6AE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */; };
+		C47CEC0E18B7785100D6AE24 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEC0D18B7785100D6AE24 /* Adium.framework */; };
+		C47CEC1118B7843800D6AE24 /* ToxPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = C47CEC1018B7843800D6AE24 /* ToxPlugin.m */; };
+		C47CEC1318B78B9C00D6AE24 /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEC1218B78B9C00D6AE24 /* AdiumLibpurple.framework */; };
+		C47CEC1518B79B4B00D6AE24 /* toxprpl.c in Sources */ = {isa = PBXBuildFile; fileRef = C47CEC1418B79B4B00D6AE24 /* toxprpl.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C47CEBF618B7774B00D6AE24 /* ToxPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		C47CEBF618B7774B00D6AE24 /* ToxPlugin.AdiumPlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxPlugin.AdiumPlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47CEBF918B7774B00D6AE24 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C47CEBFC18B7774B00D6AE24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C47CEBFD18B7774B00D6AE24 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -20,6 +24,12 @@
 		C47CEC0118B7774B00D6AE24 /* ToxPlugin-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToxPlugin-Info.plist"; sourceTree = "<group>"; };
 		C47CEC0318B7774B00D6AE24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C47CEC0518B7774B00D6AE24 /* ToxPlugin-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ToxPlugin-Prefix.pch"; sourceTree = "<group>"; };
+		C47CEC0D18B7785100D6AE24 /* Adium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Adium.framework; sourceTree = "<group>"; };
+		C47CEC0F18B7843800D6AE24 /* ToxPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToxPlugin.h; sourceTree = "<group>"; };
+		C47CEC1018B7843800D6AE24 /* ToxPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToxPlugin.m; sourceTree = "<group>"; };
+		C47CEC1218B78B9C00D6AE24 /* AdiumLibpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdiumLibpurple.framework; sourceTree = "<group>"; };
+		C47CEC1418B79B4B00D6AE24 /* toxprpl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = toxprpl.c; sourceTree = "<group>"; };
+		C47CEC1618B79C3400D6AE24 /* toxprpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = toxprpl.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +37,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47CEC1318B78B9C00D6AE24 /* AdiumLibpurple.framework in Frameworks */,
 				C47CEBFA18B7774B00D6AE24 /* Cocoa.framework in Frameworks */,
+				C47CEC0E18B7785100D6AE24 /* Adium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +58,7 @@
 		C47CEBF718B7774B00D6AE24 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C47CEBF618B7774B00D6AE24 /* ToxPlugin.bundle */,
+				C47CEBF618B7774B00D6AE24 /* ToxPlugin.AdiumPlugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +66,8 @@
 		C47CEBF818B7774B00D6AE24 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C47CEC1218B78B9C00D6AE24 /* AdiumLibpurple.framework */,
+				C47CEC0D18B7785100D6AE24 /* Adium.framework */,
 				C47CEBF918B7774B00D6AE24 /* Cocoa.framework */,
 				C47CEBFB18B7774B00D6AE24 /* Other Frameworks */,
 			);
@@ -81,9 +95,13 @@
 		C47CEC0018B7774B00D6AE24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C47CEC1418B79B4B00D6AE24 /* toxprpl.c */,
 				C47CEC0118B7774B00D6AE24 /* ToxPlugin-Info.plist */,
 				C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */,
 				C47CEC0518B7774B00D6AE24 /* ToxPlugin-Prefix.pch */,
+				C47CEC0F18B7843800D6AE24 /* ToxPlugin.h */,
+				C47CEC1018B7843800D6AE24 /* ToxPlugin.m */,
+				C47CEC1618B79C3400D6AE24 /* toxprpl.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -105,7 +123,7 @@
 			);
 			name = ToxPlugin;
 			productName = ToxPlugin;
-			productReference = C47CEBF618B7774B00D6AE24 /* ToxPlugin.bundle */;
+			productReference = C47CEBF618B7774B00D6AE24 /* ToxPlugin.AdiumPlugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -150,6 +168,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47CEC1118B7843800D6AE24 /* ToxPlugin.m in Sources */,
+				C47CEC1518B79B4B00D6AE24 /* toxprpl.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,26 +258,78 @@
 		C47CEC0918B7774B00D6AE24 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Adium-anpqmqjjctzybqdfmvexapetknvy/Build/Products/Debug",
+					/Users/epic/Documents/xcodeproject/ToxPlugin,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToxPlugin/ToxPlugin-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/Cellar/glib/2.40.0_1/lib/glib-2.0/include",
+					"/usr/local/Cellar/glib/2.40.0_1/include/glib-2.0",
+					/usr/local/opt/gettext/include,
+					/usr/local/include,
+					/Users/epic/Documents/git/toxcore/toxcore/,
+					/Users/epic/Documents/hg/adium/Frameworks/libpurple.framework/Versions/Current/Headers,
+				);
 				INFOPLIST_FILE = "ToxPlugin/ToxPlugin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					"/usr/local/opt/gettext/lib/**",
+					"/usr/local/Cellar/glib/2.40.0_1/lib/**",
+				);
+				OTHER_LDFLAGS = (
+					"-lglib-2.0",
+					"-lintl",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/glib-2.0";
+				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Debug;
 		};
 		C47CEC0A18B7774B00D6AE24 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Adium-anpqmqjjctzybqdfmvexapetknvy/Build/Products/Debug",
+					/Users/epic/Documents/xcodeproject/ToxPlugin,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToxPlugin/ToxPlugin-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/usr/local/Cellar/glib/2.40.0_1/lib/glib-2.0/include",
+					"/usr/local/Cellar/glib/2.40.0_1/include/glib-2.0",
+					/usr/local/opt/gettext/include,
+					/usr/local/include,
+					/Users/epic/Documents/git/toxcore/toxcore/,
+					/Users/epic/Documents/hg/adium/Frameworks/libpurple.framework/Versions/Current/Headers,
+				);
 				INFOPLIST_FILE = "ToxPlugin/ToxPlugin-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/**",
+					"/usr/local/opt/gettext/lib/**",
+					"/usr/local/Cellar/glib/2.40.0_1/lib/**",
+				);
+				OTHER_LDFLAGS = (
+					"-lglib-2.0",
+					"-lintl",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				USER_HEADER_SEARCH_PATHS = "/usr/local/include/glib-2.0";
+				WRAPPER_EXTENSION = AdiumPlugin;
 			};
 			name = Release;
 		};
@@ -280,6 +352,7 @@
 				C47CEC0A18B7774B00D6AE24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

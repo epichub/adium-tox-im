@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C47CEBF518B7774B00D6AE24"
-               BuildableName = "ToxPlugin.bundle"
+               BuildableName = "ToxPlugin.AdiumPlugin"
                BlueprintName = "ToxPlugin"
                ReferencedContainer = "container:ToxPlugin.xcodeproj">
             </BuildableReference>
