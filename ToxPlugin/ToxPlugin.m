@@ -8,13 +8,14 @@
 
 #import "ToxPlugin.h"
 #import "toxprpl.h"
-
+#import "ToxService.h"
 extern void purple_init_tox_plugin();
 
 @implementation ToxPlugin
 - (void) installPlugin
 {
     purple_init_tox_plugin();
+    [ToxService registerService];
 }
 
 - (void) uninstallPlugin
