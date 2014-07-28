@@ -7,15 +7,43 @@
 //
 
 #import "ToxPlugin.h"
+#import "toxprpl.h"
+
+extern void purple_init_tox_plugin();
 
 @implementation ToxPlugin
 - (void) installPlugin
 {
-    
+    purple_init_tox_plugin();
 }
 
 - (void) uninstallPlugin
 {
     
+}
+
+- (void)installLibpurplePlugin
+{
+    
+}
+- (void)uninstallLibpurplePlugin
+{
+    
+}
+- (void)loadLibpurplePlugin
+{
+    
+}
+- (NSString *)pluginAuthor
+{
+    return @"Bjørn Magnus Mathisen..";
+}
+- (NSString *)pluginVersion
+{
+    return @"0.1337";
+}
+- (NSString *)pluginDescription
+{
+    return  @"heh";
 }
 @end

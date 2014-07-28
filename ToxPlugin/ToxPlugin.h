@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <Adium/AIPlugin.h>
-@interface ToxPlugin : NSObject <AIPlugin>
+#import <AdiumLibpurple/AILibpurplePlugin.h>
+@interface ToxPlugin : AIPlugin <AILibpurplePlugin> {
+    
+}
 
 @end
