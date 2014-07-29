@@ -36,8 +36,9 @@ autoreconf -i
 make
 make install
 ```
-4. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
-5. Compile the plugin
+
+4. Set the Variable "ADIUM" in "User-Defined" settings under the "ToxPlugin" target build settings to your Adium source path.
+5. Compile the plugin.
 
 
 If this fails, please see the details here https://github.com/irungentoo/toxcore/blob/master/INSTALL.md#homebrew
