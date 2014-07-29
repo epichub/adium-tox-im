@@ -8,13 +8,13 @@ install:
   - mkdir adium
   - tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1
   - cd adium
-  - xcodebuild -project Adium.xcodeproj
+  - xcodebuild -project Adium.xcodeproj > /dev/null 2>&1
   - cd ..
   - cd ProjectTox-Core
   - autoreconf -i
   - ./configure
   - make
-  - ./make install
+  - make install
   - cd ..
   - xcodebuild -project ToxPlugin.xcodeproj
 branches:
