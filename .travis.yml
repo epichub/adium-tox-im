@@ -10,7 +10,7 @@ install:
   - cd adium
   - xcodebuild -project Adium.xcodeproj
   - cd ..
-  - cd Project-Tox
+  - cd ProjectTox-Core
   - autoreconf -i
   - ./configure
   - make
