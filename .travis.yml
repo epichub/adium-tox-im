@@ -2,6 +2,8 @@
 language: objective-c
 before_install:
   - wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz
+  - brew update
+  - brew install libtool automake autoconf libsodium check glib
 install:
   - mkdir adium
   - tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1
