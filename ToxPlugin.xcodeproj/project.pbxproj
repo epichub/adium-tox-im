@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C42A3D4519827C4D008A6FB5 /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A3D4419827C4D008A6FB5 /* libpurple.framework */; };
+		C44458E71987D307007C86F1 /* toxicon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = C44458E51987D307007C86F1 /* toxicon_small.png */; };
+		C44458E81987D307007C86F1 /* toxicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C44458E61987D307007C86F1 /* toxicon.png */; };
 		C47CEBFA18B7774B00D6AE24 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEBF918B7774B00D6AE24 /* Cocoa.framework */; };
 		C47CEC0418B7774B00D6AE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */; };
 		C47CEC0E18B7785100D6AE24 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEC0D18B7785100D6AE24 /* Adium.framework */; };
@@ -73,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		C42A3D4419827C4D008A6FB5 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
+		C44458E51987D307007C86F1 /* toxicon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxicon_small.png; sourceTree = SOURCE_ROOT; };
+		C44458E61987D307007C86F1 /* toxicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxicon.png; sourceTree = SOURCE_ROOT; };
 		C47CEBF618B7774B00D6AE24 /* ToxPlugin.AdiumLibpurplePlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxPlugin.AdiumLibpurplePlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47CEBF918B7774B00D6AE24 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C47CEBFC18B7774B00D6AE24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +176,8 @@
 		C47CEC0018B7774B00D6AE24 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C44458E51987D307007C86F1 /* toxicon_small.png */,
+				C44458E61987D307007C86F1 /* toxicon.png */,
 				C403C50B19844BB10099DD36 /* libtoxprpl */,
 				C47CEC0118B7774B00D6AE24 /* ToxPlugin-Info.plist */,
 				C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */,
@@ -339,6 +345,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44458E71987D307007C86F1 /* toxicon_small.png in Resources */,
+				C44458E81987D307007C86F1 /* toxicon.png in Resources */,
 				C47CEC0418B7774B00D6AE24 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

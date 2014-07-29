@@ -1,5 +1,6 @@
 /*
  *  Copyright (c) 2013 Sergey 'Jin' Bostandzhyan <jin at mediatomb dot cc>
+ *  Modified by Bjørn Magnus Mathisen <bjornmm at me dot com>
  *
  *  tox-prlp - libpurple protocol plugin or Tox (see http://tox.im)
  *
@@ -568,7 +569,7 @@ static gboolean tox_connection_check(PurpleConnection* gc)
         plugin->connected = 0;
         purple_debug_info("toxprpl", "DHT disconnected!\n");
         purple_connection_notice(gc,
-                _("Connection to DHT server lost, attempging to reconnect..."));
+                _("Connection to DHT server lost, attempting to reconnect..."));
         purple_connection_update_progress(gc, _("Reconnecting..."),
                 0,   /* which connection step this is */
                 2);  /* total number of steps */

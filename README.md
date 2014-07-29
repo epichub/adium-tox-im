@@ -1,4 +1,4 @@
-![Adium Tox plugin]
+#Adium Tox plugin
 ## Installing
 
 Download the binary here.
@@ -9,8 +9,14 @@ Download the binary here.
 
 * XCode (only tested with 5.0 and above)
 * Project-Tox 
+* Adium source code. https://trac.adium.im/wiki/GettingNewestAdiumSource
 
 ### installing project tox
+
+### How to build
+1. Download Adium source-code.
+2. Compile Adium
+3. Install project tox
 
 Either
 
@@ -30,6 +36,8 @@ autoreconf -i
 make
 make install
 ```
+4. Set the Variable "ADIUM_DEVELOP_PATH" in BuildConfig.xcconfig to your Adium source path
+5. Compile the plugin
+
 
 If this fails, please see the details here https://github.com/irungentoo/toxcore/blob/master/INSTALL.md#homebrew
-
