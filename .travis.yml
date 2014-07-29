@@ -10,6 +10,12 @@ install:
   - cd adium
   - xcodebuild -project Adium.xcodeproj
   - cd ..
+  - cd Project-Tox
+  - autoreconf -i
+  - ./configure
+  - make
+  - ./make install
+  - cd ..
   - xcodebuild -project ToxPlugin.xcodeproj
 branches:
   only:
