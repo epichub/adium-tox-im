@@ -1,9 +1,9 @@
 # from https://github.com/tripplet/Adium-Steam-IM/blob/master/.travis.yml
 language: objective-c
 before_install:
-  - wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz
-  - brew update
-  - brew install libtool automake autoconf libsodium check glib
+  - wget https://bitbucket.org/adium/adium/get/adium-1.5.10.tar.gz > /dev/null 2>&1
+  - brew update > /dev/null 2>&1
+  - brew install libtool automake autoconf libsodium check glib > /dev/null 2>&1
 install:
   - mkdir adium
   - tar xf adium-1.5.10.tar.gz -C adium/ --strip-components=1
@@ -15,6 +15,7 @@ install:
   - ./configure
   - make
   - make install
+  - cp toxcore/network.h /usr/local/include/tox
   - cd ..
   - xcodebuild -project ToxPlugin.xcodeproj
 branches:

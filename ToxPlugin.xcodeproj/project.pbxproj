@@ -97,6 +97,7 @@
 		C4B42FD419859BEB008CA26B /* ToxService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToxService.h; sourceTree = "<group>"; };
 		C4B42FD519859C54008CA26B /* ToxAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToxAccount.m; sourceTree = "<group>"; };
 		C4B42FD719859C5E008CA26B /* ToxAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToxAccount.h; sourceTree = "<group>"; };
+		C4FA58CC19883ECD00346B7A /* BuildConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +189,7 @@
 				C4B42FD419859BEB008CA26B /* ToxService.h */,
 				C4B42FD519859C54008CA26B /* ToxAccount.m */,
 				C4B42FD719859C5E008CA26B /* ToxAccount.h */,
+				C4FA58CC19883ECD00346B7A /* BuildConfig.xcconfig */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -474,6 +476,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Adium-anpqmqjjctzybqdfmvexapetknvy/Build/Products/Debug",
+					"$(ADIUM_DEVELOP_PATH)/Frameworks",
+					"$(ADIUM_DEVELOP_PATH)/build",
 					"$(ADIUM)/Frameworks",
 					"$(BUILT_PRODUCTS_DIR)/**",
 					"$(ADIUM)/build/**",
@@ -527,6 +531,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/Adium-anpqmqjjctzybqdfmvexapetknvy/Build/Products/Debug",
+					"$(ADIUM_DEVELOP_PATH)/Frameworks",
+					"$(ADIUM_DEVELOP_PATH)/build",
 					"$(ADIUM)/Frameworks",
 					"$(BUILT_PRODUCTS_DIR)/**",
 					"$(ADIUM)/build/**",

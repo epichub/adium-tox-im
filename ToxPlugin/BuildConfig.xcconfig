@@ -1,0 +1,8 @@
+//
+//  BuildConfig.xcconfig
+//  ToxPlugin
+//
+//  Created by Bjørn Magnus Mathisen on 29/07/14.
+//  Copyright (c) 2014 Bjorn Magnus Mathisen. All rights reserved.
+//
+ADIUM_DEVELOP_PATH = $(PROJECT_DIR)/adium
