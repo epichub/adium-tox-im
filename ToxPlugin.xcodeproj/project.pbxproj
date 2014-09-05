@@ -19,6 +19,14 @@
 		C4981C5F1986575A0045E387 /* AdiumLibpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4981C5E1986575A0045E387 /* AdiumLibpurple.framework */; };
 		C4B42FD319859BB7008CA26B /* ToxService.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B42FD219859BB7008CA26B /* ToxService.m */; };
 		C4B42FD619859C54008CA26B /* ToxAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B42FD519859C54008CA26B /* ToxAccount.m */; };
+		C4EBF84B19B9282A0072B4BA /* libglib-2.0.0.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = C4EBF84A19B9282A0072B4BA /* libglib-2.0.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C4EBF84D19B928570072B4BA /* libtoxdns.0.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = C4EBF84C19B928570072B4BA /* libtoxdns.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C4EBF84F19B928730072B4BA /* libtoxcore.0.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = C4EBF84E19B928720072B4BA /* libtoxcore.0.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C4EBF85119B928880072B4BA /* libintl.8.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = C4EBF85019B928880072B4BA /* libintl.8.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		C4EBF85219B928E90072B4BA /* libintl.8.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EBF85019B928880072B4BA /* libintl.8.dylib */; };
+		C4EBF85319B928F90072B4BA /* libtoxdns.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EBF84C19B928570072B4BA /* libtoxdns.0.dylib */; };
+		C4EBF85419B9290C0072B4BA /* libtoxcore.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EBF84E19B928720072B4BA /* libtoxcore.0.dylib */; };
+		C4EBF85519B929340072B4BA /* libglib-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4EBF84A19B9282A0072B4BA /* libglib-2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +81,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C4EBF84919B926E40072B4BA /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				C4EBF85119B928880072B4BA /* libintl.8.dylib in Copy Files */,
+				C4EBF84F19B928730072B4BA /* libtoxcore.0.dylib in Copy Files */,
+				C4EBF84D19B928570072B4BA /* libtoxdns.0.dylib in Copy Files */,
+				C4EBF84B19B9282A0072B4BA /* libglib-2.0.0.dylib in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C42A3D4419827C4D008A6FB5 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
 		C44458E51987D307007C86F1 /* toxicon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxicon_small.png; sourceTree = SOURCE_ROOT; };
@@ -97,6 +122,10 @@
 		C4B42FD419859BEB008CA26B /* ToxService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToxService.h; sourceTree = "<group>"; };
 		C4B42FD519859C54008CA26B /* ToxAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToxAccount.m; sourceTree = "<group>"; };
 		C4B42FD719859C5E008CA26B /* ToxAccount.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToxAccount.h; sourceTree = "<group>"; };
+		C4EBF84A19B9282A0072B4BA /* libglib-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libglib-2.0.0.dylib"; path = "../../../../../usr/local/Cellar/glib/2.40.0_1/lib/libglib-2.0.0.dylib"; sourceTree = "<group>"; };
+		C4EBF84C19B928570072B4BA /* libtoxdns.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtoxdns.0.dylib; path = ../../../../../usr/local/lib/libtoxdns.0.dylib; sourceTree = "<group>"; };
+		C4EBF84E19B928720072B4BA /* libtoxcore.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtoxcore.0.dylib; path = ../../../../../usr/local/lib/libtoxcore.0.dylib; sourceTree = "<group>"; };
+		C4EBF85019B928880072B4BA /* libintl.8.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libintl.8.dylib; path = ../../../../../usr/local/Cellar/gettext/0.19.2/lib/libintl.8.dylib; sourceTree = "<group>"; };
 		C4FA58CC19883ECD00346B7A /* BuildConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = BuildConfig.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +134,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4EBF85519B929340072B4BA /* libglib-2.0.0.dylib in Frameworks */,
+				C4EBF85419B9290C0072B4BA /* libtoxcore.0.dylib in Frameworks */,
+				C4EBF85319B928F90072B4BA /* libtoxdns.0.dylib in Frameworks */,
+				C4EBF85219B928E90072B4BA /* libintl.8.dylib in Frameworks */,
 				C4981C5F1986575A0045E387 /* AdiumLibpurple.framework in Frameworks */,
 				C4981C5D198655460045E387 /* AIUtilities.framework in Frameworks */,
 				C47CEBFA18B7774B00D6AE24 /* Cocoa.framework in Frameworks */,
@@ -128,6 +161,10 @@
 		C47CEBED18B7774B00D6AE24 = {
 			isa = PBXGroup;
 			children = (
+				C4EBF85019B928880072B4BA /* libintl.8.dylib */,
+				C4EBF84E19B928720072B4BA /* libtoxcore.0.dylib */,
+				C4EBF84C19B928570072B4BA /* libtoxdns.0.dylib */,
+				C4EBF84A19B9282A0072B4BA /* libglib-2.0.0.dylib */,
 				C47CEBFF18B7774B00D6AE24 /* ToxPlugin */,
 				C47CEBF818B7774B00D6AE24 /* Frameworks */,
 				C47CEBF718B7774B00D6AE24 /* Products */,
@@ -218,6 +255,7 @@
 				C47CEBF218B7774B00D6AE24 /* Sources */,
 				C47CEBF318B7774B00D6AE24 /* Frameworks */,
 				C47CEBF418B7774B00D6AE24 /* Resources */,
+				C4EBF84919B926E40072B4BA /* Copy Files */,
 				C4981C6119865CD70045E387 /* ShellScript */,
 			);
 			buildRules = (
@@ -366,8 +404,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "PLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n/usr/bin/tail -n +2 | \\\n/usr/bin/tr -d '\\t' | \\\n/usr/bin/grep -e '^@[a-z_]*path.*' | \\\n/usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n/usr/bin/sed \\\ns/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\nNEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\nprintf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n/usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n";
+			shellPath = /bin/bash;
+			shellScript = "#!/bin/bash\nPLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n/usr/bin/tail -n +2 | \\\n/usr/bin/tr -d '\\t' | \\\n/usr/bin/grep -e '^@[a-z_]*path.*' | \\\n/usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n/usr/bin/sed \\\ns/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\nNEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\nprintf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n/usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n\nEXECFILE=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\n#LIBPATH=${BUILT_PRODUCTS_DIR}/${SHARED_SUPPORT_FOLDER_PATH}\n#LIBPATH=${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\nLIBPATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\nNEWLIBPATH=\"@exectuable_path\"\n\n# space separated list of libraries\nTARGETS=\"libglib-2.0.0.dylib libtoxdns.0.dylib libtoxcore.0.dylib libintl.8.dylib\"\nfor TARGET in ${TARGETS} ; do\nLIBFILE=${LIBPATH}/${TARGET}\nTARGETID=`otool -DX ${LIBPATH}/$TARGET`\nNEWTARGETID=${NEWLIBPATH}/${TARGET}\ninstall_name_tool -id ${NEWTARGETID} ${LIBFILE}\ninstall_name_tool -change ${TARGETID} ${NEWTARGETID} ${EXECFILE}\ndone";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -496,23 +534,24 @@
 				);
 				INFOPLIST_FILE = "ToxPlugin/ToxPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks @executable_path";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
 					"/usr/local/opt/gettext/lib/**",
 					"/usr/local/Cellar/glib/2.40.0_1/lib/**",
 					"/Users/epic/Documents/git/ProjectTox-Core",
 					/Users/epic/Documents/xcodeproject/ToxPlugin/Adium.framework,
+					/usr/local/Cellar/gettext/0.19.2/lib,
+					/usr/local/Cellar/glib/2.40.0_1/lib,
+					"@executable_path/",
 				);
 				OTHER_LDFLAGS = (
-					"-lglib-2.0",
+					"-lglib-2.0.0",
 					"-ltoxdns",
 					"-ltoxcore",
 					"-lm",
 					"-lintl",
 					"-headerpad_max_install_names",
-					"-undefined",
-					dynamic_lookup,
 				);
 				PRELINK_LIBS = Yes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,23 +590,24 @@
 				);
 				INFOPLIST_FILE = "ToxPlugin/ToxPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
-				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks @executable_path";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
 					"/usr/local/opt/gettext/lib/**",
 					"/usr/local/Cellar/glib/2.40.0_1/lib/**",
 					"/Users/epic/Documents/git/ProjectTox-Core",
 					/Users/epic/Documents/xcodeproject/ToxPlugin/Adium.framework,
+					/usr/local/Cellar/gettext/0.19.2/lib,
+					/usr/local/Cellar/glib/2.40.0_1/lib,
+					"@executable_path/",
 				);
 				OTHER_LDFLAGS = (
-					"-lglib-2.0",
+					"-lglib-2.0.0",
 					"-ltoxdns",
 					"-ltoxcore",
 					"-lm",
 					"-lintl",
 					"-headerpad_max_install_names",
-					"-undefined",
-					dynamic_lookup,
 				);
 				PRELINK_LIBS = Yes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
