@@ -1,7 +1,12 @@
 #Adium Tox plugin
+
+## Thanks and acknowledgements
+
+This plugin consists 90% of the code from the libpurple/pidgin tox plugin, and thus 90% of the credit for this plugin should go to Sergey 'Jin' Bostandzhyan over at <http://tox.dhs.org/>. I have also gotten alot of help and inspiration from the Steam-IM Aduim plugin for how to wire up the libpurple code to Adium stubs, so thanks to <https://github.com/tripplet/Adium-Steam-IM>
+
 ## Installing
 
-If you simply want the newest pre-compiled version, ownload the binary [here](https://github.com/epichub/adium-tox-im/releases).
+If you simply want the newest pre-compiled version, download the binary [here](https://github.com/epichub/adium-tox-im/releases).
 
 If you want to compile your own fresh brew of the plugin, continue reading.
 
