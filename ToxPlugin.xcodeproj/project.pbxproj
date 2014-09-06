@@ -10,6 +10,7 @@
 		C42A3D4519827C4D008A6FB5 /* libpurple.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A3D4419827C4D008A6FB5 /* libpurple.framework */; };
 		C44458E71987D307007C86F1 /* toxicon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = C44458E51987D307007C86F1 /* toxicon_small.png */; };
 		C44458E81987D307007C86F1 /* toxicon.png in Resources */ = {isa = PBXBuildFile; fileRef = C44458E61987D307007C86F1 /* toxicon.png */; };
+		C45BB2BD19BADCCC00D877E3 /* libsodium.10.dylib in Copy Files */ = {isa = PBXBuildFile; fileRef = C45BB2BC19BADCCC00D877E3 /* libsodium.10.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		C47CEBFA18B7774B00D6AE24 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEBF918B7774B00D6AE24 /* Cocoa.framework */; };
 		C47CEC0418B7774B00D6AE24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C47CEC0218B7774B00D6AE24 /* InfoPlist.strings */; };
 		C47CEC0E18B7785100D6AE24 /* Adium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47CEC0D18B7785100D6AE24 /* Adium.framework */; };
@@ -88,6 +89,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				C45BB2BD19BADCCC00D877E3 /* libsodium.10.dylib in Copy Files */,
 				C4EBF85119B928880072B4BA /* libintl.8.dylib in Copy Files */,
 				C4EBF84F19B928730072B4BA /* libtoxcore.0.dylib in Copy Files */,
 				C4EBF84D19B928570072B4BA /* libtoxdns.0.dylib in Copy Files */,
@@ -102,6 +104,7 @@
 		C42A3D4419827C4D008A6FB5 /* libpurple.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = libpurple.framework; sourceTree = "<group>"; };
 		C44458E51987D307007C86F1 /* toxicon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxicon_small.png; sourceTree = SOURCE_ROOT; };
 		C44458E61987D307007C86F1 /* toxicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toxicon.png; sourceTree = SOURCE_ROOT; };
+		C45BB2BC19BADCCC00D877E3 /* libsodium.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsodium.10.dylib; path = ../../../../../usr/local/Cellar/libsodium/0.6.1/lib/libsodium.10.dylib; sourceTree = "<group>"; };
 		C47CEBF618B7774B00D6AE24 /* ToxPlugin.AdiumLibpurplePlugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToxPlugin.AdiumLibpurplePlugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		C47CEBF918B7774B00D6AE24 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C47CEBFC18B7774B00D6AE24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,7 @@
 		C47CEBED18B7774B00D6AE24 = {
 			isa = PBXGroup;
 			children = (
+				C45BB2BC19BADCCC00D877E3 /* libsodium.10.dylib */,
 				C4EBF85019B928880072B4BA /* libintl.8.dylib */,
 				C4EBF84E19B928720072B4BA /* libtoxcore.0.dylib */,
 				C4EBF84C19B928570072B4BA /* libtoxdns.0.dylib */,
@@ -405,7 +409,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "#!/bin/bash\nPLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n/usr/bin/tail -n +2 | \\\n/usr/bin/tr -d '\\t' | \\\n/usr/bin/grep -e '^@[a-z_]*path.*' | \\\n/usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n/usr/bin/sed \\\ns/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\nNEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\nprintf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n/usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n\nEXECFILE=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\n#LIBPATH=${BUILT_PRODUCTS_DIR}/${SHARED_SUPPORT_FOLDER_PATH}\n#LIBPATH=${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\nLIBPATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\nNEWLIBPATH=\"@exectuable_path\"\n\n# space separated list of libraries\nTARGETS=\"libglib-2.0.0.dylib libtoxdns.0.dylib libtoxcore.0.dylib libintl.8.dylib\"\nfor TARGET in ${TARGETS} ; do\nLIBFILE=${LIBPATH}/${TARGET}\nTARGETID=`otool -DX ${LIBPATH}/$TARGET`\nNEWTARGETID=${NEWLIBPATH}/${TARGET}\ninstall_name_tool -id ${NEWTARGETID} ${LIBFILE}\ninstall_name_tool -change ${TARGETID} ${NEWTARGETID} ${EXECFILE}\ndone";
+			shellScript = "#!/bin/bash\nPLUGIN_BIN=\"$TARGET_BUILD_DIR/$EXECUTABLE_PATH\"\nLIBS=\"$(/usr/bin/otool -L \"$PLUGIN_BIN\" | \\\n/usr/bin/tail -n +2 | \\\n/usr/bin/tr -d '\\t' | \\\n/usr/bin/grep -e '^@[a-z_]*path.*' | \\\n/usr/bin/grep -v -e '\\.framework/Versions/Current' | \\\n/usr/bin/sed \\\ns/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n\nfor LIB in $LIBS; do\nNEW_LIB=\"$(/bin/echo \"$LIB\" | /usr/bin/sed s,'Versions/[A-Za-z0-9.]*/','Versions/Current/',)\"\nprintf \"Changing '%s' to '%s'\\n\" \"$LIB\" \"$NEW_LIB\"\n/usr/bin/install_name_tool -change \"$LIB\" \"$NEW_LIB\" \"$PLUGIN_BIN\"\ndone\n\nEXECFILE=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\n#LIBPATH=${BUILT_PRODUCTS_DIR}/${SHARED_SUPPORT_FOLDER_PATH}\n#LIBPATH=${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}\nLIBPATH=${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}\nNEWLIBPATH=\"@executable_path/\"\n\n# space separated list of libraries\nTARGETS=\"libglib-2.0.0.dylib libtoxdns.0.dylib libtoxcore.0.dylib libintl.8.dylib\"\nfor TARGET in ${TARGETS} ; do\nLIBFILE=${LIBPATH}/${TARGET}\nTARGETID=`otool -DX ${LIBPATH}/$TARGET`\nNEWTARGETID=${NEWLIBPATH}/${TARGET}\ninstall_name_tool -id ${NEWTARGETID} ${LIBFILE}\ninstall_name_tool -change ${TARGETID} ${NEWTARGETID} ${EXECFILE}\ndone\n\nfor TARGET in ${TARGETS} ; do\ninstall_name_tool -change ${NEWLIBPATH}/${TARGET} \"@loader_path/\"${TARGET} ${EXECFILE}\ndone\n\nfor TARGET in ${TARGETS} ; do\n    TARGETPATH=${LIBPATH}/${TARGET}\n    LOCALLIBS=\"$(otool -L $TARGETPATH | grep local | /usr/bin/tr -d '\\t' | sed s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g | sed s/'.*lib\\/'/''/)\"\n    printf \"TARGET: '%s' LOCALLIBS: '%s'\\n\" \"$TARGET\" \"$LOCALLIBS\"\n    if [ -n \"$LOCALLIBS\" ] ; then\n        for LOCALLIB in $LOCALLIBS ; do\n            ORIG=\"$(otool -L $TARGETPATH  | grep local | grep $LOCALLIB | /usr/bin/tr -d '\\t' | sed s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g)\"\n            NEW=\"@loader_path/$(otool -L $TARGETPATH | grep local | grep $LOCALLIB | /usr/bin/tr -d '\\t' | sed s/'(compatibility version [0-9.]*, current version [0-9.]*)'/''/g | sed s/'.*lib\\/'/''/)\"\n            printf \"\\t in TARGET: '%s' changing \\\"'%s'\\\" to \\\"'%s'\\\"\\n\" \"$TARGET\" \"$ORIG\" \"$NEW\"\n            install_name_tool -change ${ORIG} ${NEW} ${TARGETPATH}\n\n        done\n    fi\ndone\n\n#install_name_tool -change ${NEWLIBPATH}/\"libintl.8.dylib\" \"@loader_path/libintl.8.dylib\" ${EXECFILE}";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -534,7 +538,7 @@
 				);
 				INFOPLIST_FILE = "ToxPlugin/ToxPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
 					"/usr/local/opt/gettext/lib/**",
@@ -590,7 +594,7 @@
 				);
 				INFOPLIST_FILE = "ToxPlugin/ToxPlugin-Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Application Support/Adium 2.0/PlugIns/";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks @executable_path";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path";
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/lib,
 					"/usr/local/opt/gettext/lib/**",
